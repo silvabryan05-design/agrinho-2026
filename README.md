@@ -1,1 +1,2 @@
 # agrinho-2026
+Agro Forte: Futuro Sustentável é um site dedicado a mostrar como a produção agropecuária pode crescer de forma responsável, equilibrando tecnologia, produtividade e preservação ambiental. Descubra práticas sustentáveis, inovação no campo, conservação dos recursos naturais e soluções inteligentes que ajudam a construir um futuro mais verde, consciente e sustentável para as próximas gerações.
