@@ -1,0 +1,302 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ================= NAVBAR ================= */
+
+header {
+    background: #2e7d32;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 8%;
+}
+
+.logo {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd54f;
+}
+
+/* Menu mobile */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1400&auto=format&fit=crop");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    max-width: 700px;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+}
+
+.btn {
+    background: #ffd54f;
+    color: #333;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffca28;
+}
+
+/* ================= SEÇÕES ================= */
+
+section {
+    padding: 80px 10%;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2e7d32;
+    font-size: 2.2rem;
+}
+
+/* ================= SOBRE ================= */
+
+.sobre-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sobre-container img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+}
+
+.texto {
+    flex: 1;
+}
+
+.texto p {
+    margin-bottom: 15px;
+}
+
+/* ================= PRÁTICAS ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card i {
+    font-size: 45px;
+    color: #43a047;
+    margin-bottom: 15px;
+}
+
+/* ================= GALERIA ================= */
+
+.slider {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.slides {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Botões slider */
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(0,0,0,0.5);
+    color: white;
+
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.social {
+    margin: 20px 0;
+}
+
+.social a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    color: #ffd54f;
+}
+
+.copy {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* ================= ANIMAÇÃO ================= */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+
+        background: #2e7d32;
+
+        flex-direction: column;
+        width: 220px;
+
+        padding: 20px;
+
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+}
